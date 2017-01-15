@@ -1,0 +1,4 @@
+#!/bin/bash
+gem list -i bundler > /dev/null || gem install bundler
+bundle install --jobs 0 --standalone --path .bundle $@ # jobs is 0 to work around a standalone bug that will be fixed in 1.7
+ruby --disable-gems bin/rake db:create db:schema:load db:seed # ruby flags are for Linux, which can't see shebang arguments

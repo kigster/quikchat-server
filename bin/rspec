@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby --disable-gems --disable-rubyopt
+require_relative '../config/boot'
+load File.expand_path('../exe/rspec', $LOAD_PATH.grep(/rspec-core/).first)

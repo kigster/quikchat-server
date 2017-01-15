@@ -1,0 +1,12 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.3.3
+script: "gem install bundler rake --no-ri --no-rdoc; rake"
+script: bin/ci
+notifications:
+  email:
+    recipients:
+      - kigster@gmail.com
+    on_success: never
+

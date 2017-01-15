@@ -1,0 +1,5 @@
+#!/bin/bash
+bin/setup --without development
+# Linux can't handle more than one argument in a shebang, so we
+# pass those arguments to ruby here before loading bin/rspec
+ruby --disable-gems --disable-rubyopt bin/rspec
